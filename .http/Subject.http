@@ -1,0 +1,35 @@
+### Create Subject
+POST http://localhost:8800/subjects HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiYWxleGRvZTMiLCJyb2xlIjoiU1RVREVOVCIsImlhdCI6MTcxMDk2MTczMCwiZXhwIjoxNzEwOTYxNzkwfQ.aCkmRiUCzuxDIY5tI8WemV-eHaiDqPmgKl2-mT3tAWA
+
+{
+  "name": "Science"
+}
+
+
+### Read all Subjects
+GET http://localhost:8800/subjects HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiYWxleGRvZTMiLCJyb2xlIjoiU1RVREVOVCIsImlhdCI6MTcxMDk2MTczMCwiZXhwIjoxNzEwOTYxNzkwfQ.aCkmRiUCzuxDIY5tI8WemV-eHaiDqPmgKl2-mT3tAWA
+
+### Read Subject by Id
+GET http://localhost:8800/subjects/2 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiYWxleGRvZTMiLCJyb2xlIjoiU1RVREVOVCIsImlhdCI6MTcxMDk2MTczMCwiZXhwIjoxNzEwOTYxNzkwfQ.aCkmRiUCzuxDIY5tI8WemV-eHaiDqPmgKl2-mT3tAWA
+
+
+### Update Subject by Id
+PATCH http://localhost:8800/subjects/2 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiYWxleGRvZTMiLCJyb2xlIjoiU1RVREVOVCIsImlhdCI6MTcxMDk2MTczMCwiZXhwIjoxNzEwOTYxNzkwfQ.aCkmRiUCzuxDIY5tI8WemV-eHaiDqPmgKl2-mT3tAWA
+
+{
+  "name": "EDITED"
+}
+
+
+### Delete Subject by Id
+DELETE http://localhost:8800/subjects/2 HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXJuYW1lIjoiYWxleGRvZTMiLCJyb2xlIjoiU1RVREVOVCIsImlhdCI6MTcxMDk2MTczMCwiZXhwIjoxNzEwOTYxNzkwfQ.aCkmRiUCzuxDIY5tI8WemV-eHaiDqPmgKl2-mT3tAWA

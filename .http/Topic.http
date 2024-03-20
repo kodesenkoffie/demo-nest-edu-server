@@ -1,0 +1,32 @@
+### Create Topic
+POST http://localhost:8800/topics HTTP/1.1
+Content-Type: application/json
+
+{
+  "subjectId": 1,
+  "name": "Calculus 2"
+}
+
+
+### Read all Topics
+GET http://localhost:8800/topics HTTP/1.1
+Content-Type: application/json
+
+
+### Read Topic by Id
+GET http://localhost:8800/topics/2 HTTP/1.1
+Content-Type: application/json
+
+
+### Update Topic by Id
+PATCH http://localhost:8800/topics/2 HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "EDITED"
+}
+
+
+### Delete Topic by Id
+DELETE http://localhost:8800/topics/2 HTTP/1.1
+Content-Type: application/json

@@ -1,0 +1,41 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum EUserRole {
+  ADMIN
+  TEACHER
+  STUDENT
+}
+
+model User {
+  id       Int       @id @default(autoincrement())
+  name     String?
+  username String    @unique
+  password String?
+  userRole EUserRole @default(STUDENT)
+
+  @@map("users")
+}
+
+model Subject {
+  id     Int     @id @default(autoincrement())
+  name   String  @unique
+  topics Topic[]
+
+  @@map("subjects")
+}
+
+model Topic {
+  id        Int      @id @default(autoincrement())
+  name      String   @unique
+  Subject   Subject? @relation(fields: [subjectId], references: [id])
+  subjectId Int?
+
+  @@map("topics")
+}
